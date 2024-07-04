@@ -100,7 +100,8 @@ input::placeholder {
   color: #fff;
 }
 
-.edit-btn {
+.edit-btn,
+.details-btn {
   font-weight: 500;
   font-size: 16px;
   color: #fff;
@@ -116,7 +117,8 @@ input::placeholder {
   transition: 0.2s all ease-in;
 }
 
-.edit-btn:hover {
+.edit-btn:hover,
+.details-btn:hover {
   background-color: #222222;
   color: #fff;
 }

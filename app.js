@@ -9,7 +9,7 @@ let currentEditionId;
 
 const url = "http://localhost:4000/api/v1/students";
 
-async function displayData() {
+const displayData = async () => {
   try {
     const reponse = await fetch(url);
     const apiData = await reponse.json();
@@ -26,6 +26,7 @@ async function displayData() {
         <td>
             <button type="button" class="delete-btn" data-id="${item.id}">Delete</button>
             <button type="button" class="edit-btn" data-id="${item.id}">Edit</button>
+            <button type="button" class="details-btn" data-id="${item.id}">Details</button>
         </td>
     `;
 
@@ -36,7 +37,7 @@ async function displayData() {
   } catch (err) {
     console.error("Get error:", err);
   }
-}
+};
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -83,6 +84,7 @@ form.addEventListener("submit", async (e) => {
         <td>
             <button type="button" class="delete-btn" data-id="${id}">Delete</button>
             <button type="button" class="edit-btn" data-id="${id}">Edit</button>
+            <button type="button" class="details-btn" data-id="${id}">Details</button>
         </td>
       `;
       tBody.appendChild(tr);
@@ -105,6 +107,11 @@ function addEventListenerToAllButtons() {
   const editButtons = document.querySelectorAll(".edit-btn");
   editButtons.forEach((button) => {
     button.addEventListener("click", editStudentData);
+  });
+
+  const detailsButtons = document.querySelectorAll(".details-btn");
+  detailsButtons.forEach((button) => {
+    button.addEventListener("click", goToDetailsPage);
   });
 }
 
@@ -134,8 +141,15 @@ const editStudentData = async (e) => {
   nameInput.value = name;
   majorInput.value = major;
   submitBtn.textContent = "Save";
+  nameInput.focus();
 
   currentEditionId = id;
+};
+
+const goToDetailsPage = (e) => {
+  const id = e.target.dataset.id;
+  console.log(id);
+  location.assign(`data/details.html?id=${id}`);
 };
 
 displayData();
