@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.title {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+body {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+form {
+  margin-bottom: 30px;
+}
+
+input {
+  font-size: 16px;
+  font-weight: 400;
+  width: 250px;
+  color: #344054;
+  background: #ffffff;
+  border: 1px solid #d0d5dd;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+input::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color: #667085;
+}
+
+.submit-btn {
+  font-weight: 500;
+  font-size: 16px;
+  color: #222222;
+  background: transparent;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  min-width: 150px;
+  padding: 7px 0;
+  margin-left: 10px;
+  transition: 0.2s all ease-in;
+}
+
+.submit-btn:hover {
+  background-color: #222222;
+  color: #fff;
+}
+
+.delete-btn {
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+  background: transparent;
+  background-color: #f87171;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  min-width: 100px;
+  padding: 7px 0;
+  margin-left: 10px;
+  transition: 0.2s all ease-in;
+}
+
+.delete-btn:hover {
+  background-color: #222222;
+  color: #fff;
+}
+
+.edit-btn {
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+  background: transparent;
+  background-color: #60a5fa;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  min-width: 100px;
+  padding: 7px 0;
+  margin-left: 10px;
+  transition: 0.2s all ease-in;
+}
+
+.edit-btn:hover {
+  background-color: #222222;
+  color: #fff;
+}
